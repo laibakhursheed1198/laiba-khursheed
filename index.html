@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AL Sadiq Department of Art — Laiba Khursheed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <div class="grid-lines"></div>
+    <div class="grain"></div>
+  </div>
+
+  <main>
+    <section class="intro">
+      <h1 class="title">
+        <span>AL Sadiq</span>
+        <span class="outline">Department of Art</span>
+      </h1>
+    </section>
+
+    <!--
+      VIDEO LIST
+      Replace each data-video value with your Google Drive share link, e.g.
+      https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+      (Set sharing to "Anyone with the link".)
+      Direct .mp4 links and YouTube links also work.
+      data-title is optional — it shows on the card and in the player.
+    -->
+    <section class="grid">
+      <button class="card" data-video="https://drive.google.com/file/d/1V1CP49eHXbtom3HKHVeSEsyltChWbsrt/view?usp=sharing" data-title="Video 01"></button>
+    </section>
+  </main>
+
+  <footer>Made with <span class="heart">♥</span> by Laiba Khursheed</footer>
+
+  <!-- Video popup -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box">
+      <button class="close" data-close aria-label="Close video">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+      <div class="player" id="player"></div>
+      <p class="modal-title" id="modalTitle"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
